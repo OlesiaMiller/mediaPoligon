@@ -1,0 +1,76 @@
+.feature__icon {
+    position: relative;
+
+    display: block;
+  
+    width: 150px;
+    height: 150px;
+    margin: (40px * 0.75) auto (40px * 1.5);
+  
+    text-align: center;
+  
+    color: #ffffff;
+    background: red;
+  
+    font-size: 2rem;
+    line-height: 40px;
+/* все, что выше - форматирование полигона, оставила, как было */
+
+/* псевдоэлементы убрала */
+
+    /*
+  
+    &::before {
+      position: absolute;
+      top: -$base-size * 0.625;
+      left: 0;
+  
+      content: "";
+  
+      border-right: $base-size solid transparent;
+      border-bottom: ($base-size * 0.625) solid $color-accent;
+      border-left: $base-size solid transparent;
+    }
+  
+    &::after {
+      position: absolute;
+      bottom: -($base-size * 0.625);
+      left: 0;
+  
+      content: "";
+  
+      border-top: ($base-size * 0.625) solid $color-accent;
+      border-right: $base-size solid transparent;
+      border-left: $base-size solid transparent;
+    }
+  }
+   */
+    
+/* добавила эту строку */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+
+/* пример медиазапросов */
+
+@media (max-width: 992px) {
+  .feature__icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
